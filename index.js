@@ -1,3 +1,7 @@
-var http = require('http');
-const GUN = require('gun');
-console.log(`Started Gun.js`)
+const gunLib = require("gun")
+
+const server = require('http').createServer().listen(8080);
+
+const gun = gunLib({
+   web: server
+});
